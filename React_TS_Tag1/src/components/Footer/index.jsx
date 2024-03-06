@@ -1,5 +1,5 @@
 const Footer =()=>{
-    return <footer style={{ backgroundColor: "red", width: "100%", minHeight: "30px", height: "auto" }}>
+    return <footer className={"footer"}>
         <div>menu</div>
         <div>social media</div>
     </footer>

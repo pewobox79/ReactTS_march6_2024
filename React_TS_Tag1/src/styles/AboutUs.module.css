@@ -1,0 +1,16 @@
+.viewOuter {
+    display: flex;
+    width: 100%;
+    padding: 30px 0;
+    border: 1px solid green;
+}
+
+.memberCard {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 10px
+}
+
+.cardBody {
+    background-color: lightgray;
+}

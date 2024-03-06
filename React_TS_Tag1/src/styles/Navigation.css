@@ -1,0 +1,13 @@
+.isActive {
+    color: yellow;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px
+}
+
+.inActive {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px
+}

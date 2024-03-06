@@ -1,9 +1,9 @@
 import './App.css'
-import Homepage from './pages/Homepage'
+import AboutUs from './pages/AboutUs'
 
 export default function App() {
   
-  return <Homepage/>
+  return <AboutUs/>
   
 }
 
