@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import Services from "../pages/Services";
 import UserPage from "../pages/UserPage";
+import TypeScriptPage from "../pages/TypeScriptPage";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -12,6 +13,7 @@ export const router = createBrowserRouter(
             <Route path="users">
                 <Route index element={<UserPage/>}/>
             </Route>
+            <Route path="typescript" element={<TypeScriptPage/>}/>
 
         </Route>
     )

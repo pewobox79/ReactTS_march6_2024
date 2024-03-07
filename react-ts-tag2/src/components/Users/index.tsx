@@ -7,14 +7,26 @@ const Users = () => {
     //user daten fetch
 
     const [users, setUsers] = useState<[]>([])
+    const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const URL = "https://jsonplaceholder.typicode.com/users";
+    const controller = new AbortController();
+    const signal = controller.signal;
 
     useEffect(() => {
+        setIsLoading(true);
+        setTimeout(()=>{
+            fetch(URL, {signal:signal})
+                .then(res => res.json())
+                .then(data => {
+                    setUsers(data)
+                    setIsLoading(false)
+                });
 
-        fetch(URL)
-            .then(res => res.json())
-            .then(data => setUsers(data));
+                return ()=>controller.abort()
+        }, 2000)
+        
+            
     }, [])
 
     console.log("userliste", users)
@@ -26,7 +38,7 @@ const Users = () => {
     return (
         <div>
             <h2>user overview</h2>
-            {UsersList}
+            {isLoading ? <div>is Loading...</div> :UsersList}
         </div>
     )
 }

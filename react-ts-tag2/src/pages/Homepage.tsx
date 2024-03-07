@@ -1,7 +1,9 @@
+import Forms from "../components/Forms"
 const Homepage = () => {
     return (
         <div>
             <h1>Homepage</h1>
+            <Forms/>
         </div>
     )
 }

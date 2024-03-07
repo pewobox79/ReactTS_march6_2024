@@ -1,5 +1,5 @@
 export type UserItemType = {
-    name?: string,
+    name: string,
     email: string,
     id: string
 }
